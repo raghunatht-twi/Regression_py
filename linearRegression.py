@@ -76,7 +76,48 @@ plt.close();
     
 #Outlier Analysis
 
+''' Outliers skew the value of regression coefficients. Following distance measures are used to identify outliers
+    1. Z Score
+    2. Mahalanobis Distance
+    3. Cook's Distance
+    4. Leverage Values
+    '''
+# Z Score is the standardized distance of an observation from its mean value.
+# Z = (X - Mu)/Sigma
 
+from scipy.stats import zscore;
+mba_salary_df['z_score_salary'] = zscore(mba_salary_df['Salary']);
+
+#Cook's Distance
+
+mba_influence = mba_salary_lm.get_influence();
+(c, p) = mba_influence.cooks_distance;
+
+print(np.round(c,3));
+
+plt.stem(np.arange(len(train_X)), np.round(c,3), markerfmt=",");
+plt.title("Cook's Distance Plot");
+plt.xlabel("Row Index");
+plt.ylabel("Cook's Distance");
+plt.savefig("cooks_distance_plot.png");
+plt.close();
+
+#mba_salary_df['cooks_d'] = c;
+print(mba_salary_df[11:18]);
+
+#Leverage values of an observation measures the influence of that observation on the overall fit of the regression function and is related to the Mahalnobis distance. leverage value of more than 3(k+1)/n is treated as highly influential observation.
+
+from statsmodels.graphics.regressionplots import influence_plot;
+fig, ax = plt.subplots(figsize=(8,6));
+influence_plot(mba_salary_lm, ax=ax);
+plt.title("Leverage Value vs Residuals Plot");
+plt.savefig("leverageVsResiduals.png");
+plt.close();
+
+
+
+    
+    
 
 
 
