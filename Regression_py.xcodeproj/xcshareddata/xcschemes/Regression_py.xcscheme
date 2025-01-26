@@ -61,6 +61,10 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "/Users/raghunatht/Documents/Programming/Python/Regression_py/linearRegression.py"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/raghunatht/Documents/Programming/Python/Regression_py/multipleLinearRegression.py"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
