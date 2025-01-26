@@ -6,10 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXFileReference section */
+		2CE1CD1B2D45DAF200277BF5 /* linearRegression.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = linearRegression.py; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		2C1A98F32D45D9C900A833FB = {
 			isa = PBXGroup;
 			children = (
+				2CE1CD1B2D45DAF200277BF5 /* linearRegression.py */,
 			);
 			sourceTree = "<group>";
 		};
