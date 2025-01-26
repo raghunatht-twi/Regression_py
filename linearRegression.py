@@ -114,6 +114,34 @@ plt.title("Leverage Value vs Residuals Plot");
 plt.savefig("leverageVsResiduals.png");
 plt.close();
 
+# Making prediticions using the model and measuring its accuracy
+pred_Y = mba_salary_lm.predict(test_X);
+
+from sklearn.metrics import mean_squared_error, r2_score;
+print("The R-Squared for test data is - ",np.abs(r2_score(test_Y, pred_Y)));
+
+print("The mean squared error for test data is - ",np.sqrt(mean_squared_error(test_Y, pred_Y)));
+
+#Calculating the prediction intervals
+from statsmodels.sandbox.regression.predstd import wls_prediction_std;
+
+pred_Y = mba_salary_lm.predict(test_X);
+_, pred_y_low, pred_y_high = wls_prediction_std(mba_salary_lm, test_X, alpha=0.05);
+
+pred_y_df = pd.DataFrame({'grade_10_pct': test_X['Percentage in Grade 10'],
+        'actual_salary': test_Y,
+        'pred_Y': pred_Y,
+        'pred_Y_low': pred_y_low,
+        'pred_Y_high': pred_y_high});
+print(pred_y_df.head(10));
+
+plt.scatter(pred_y_df['grade_10_pct'], pred_y_df['actual_salary'], color='blue');
+plt.scatter(pred_y_df['grade_10_pct'], pred_y_df['pred_Y'], color='red');
+plt.title("Actual vs Predicted Salary");
+plt.xlabel("Percentage in Grade 10");
+plt.ylabel("Salary");
+plt.savefig("actualVsPredictedSalary.png");
+plt.close();
 
 
     
