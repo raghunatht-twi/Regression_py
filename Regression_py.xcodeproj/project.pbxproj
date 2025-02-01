@@ -10,12 +10,14 @@
 		2CE1CD1B2D45DAF200277BF5 /* linearRegression.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = linearRegression.py; sourceTree = "<group>"; };
 		2CE560E22D4600950079AAA0 /* commFunctions.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = commFunctions.py; sourceTree = "<group>"; };
 		2CE560E42D464A200079AAA0 /* multipleLinearRegression.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = multipleLinearRegression.py; sourceTree = "<group>"; };
+		2CFAC6D52D4E8B51009311AF /* classificationProblems.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = classificationProblems.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		2C1A98F32D45D9C900A833FB = {
 			isa = PBXGroup;
 			children = (
+				2CFAC6D52D4E8B51009311AF /* classificationProblems.py */,
 				2CE1CD1B2D45DAF200277BF5 /* linearRegression.py */,
 				2CE560E42D464A200079AAA0 /* multipleLinearRegression.py */,
 				2CE560E22D4600950079AAA0 /* commFunctions.py */,

@@ -42,4 +42,10 @@ def plot_resid_fitted(fitted, resid, title):
     plt.savefig("/Users/raghunatht/Documents/Programming/Python/Regression_py/residual_plot_multiRegression.png");
     plt.close();
     
-    
+# Get significant variables
+def get_significant_vars(lm):
+    var_p_vals_df = pd.DataFrame(lm.pvalues);
+    var_p_vals_df['vars'] = var_p_vals_df.index;
+    var_p_vals_df.columns = ['pvals', 'vars'];
+    #filter the column names where p-value < 0.05
+    return list(var_p_vals_df[var_p_vals_df.pvals <= 0.05]['vars'])
