@@ -67,3 +67,13 @@ y_pred_df['predicted'] = y_pred_df.predicted_prob.map(lambda x: 1 if x > 0.5 els
 
 print(y_pred_df.sample(10, random_state=42));
 
+#from sklearn import metrics;
+#cm = metrics.confusion_matrix(y_pred_df['actual'], y_pred_df['predicted']);
+#print(cm);
+
+from commFunctions import draw_cm;
+draw_cm(y_pred_df['actual'], y_pred_df['predicted']);
+
+from sklearn import metrics;
+print(metrics.classification_report(y_pred_df['actual'], y_pred_df['predicted']));
+

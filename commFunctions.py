@@ -9,6 +9,8 @@ import numpy as np;
 
 import matplotlib.pyplot as plt;
 import statsmodels.api as sm;
+import seaborn as sn;
+
 
 def get_standardized_values(vals):
     return (vals - vals.mean())/vals.std();
@@ -49,3 +51,15 @@ def get_significant_vars(lm):
     var_p_vals_df.columns = ['pvals', 'vars'];
     #filter the column names where p-value < 0.05
     return list(var_p_vals_df[var_p_vals_df.pvals <= 0.05]['vars'])
+
+
+from sklearn import metrics;
+def draw_cm(actual, predicted):
+    cm = metrics.confusion_matrix(actual, predicted);
+    sn.heatmap(cm, annot=True, fmt='.2f', xticklabels=['Good Credit', 'Bad Credit'], yticklabels=['Good Credit', 'Bad Credit']);
+    plt.ylabel('True Label');
+    plt.xlabel('Predicted Label');
+    plt.savefig("/Users/raghunatht/Documents/Programming/Python/Regression_py/ConfusionMatrix.png");
+    plt.close();
+
+
