@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		2CBFF2AE2D97F54400976755 /* firstFile.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = firstFile.py; sourceTree = "<group>"; };
 		2CE1CD1B2D45DAF200277BF5 /* linearRegression.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = linearRegression.py; sourceTree = "<group>"; };
 		2CE560E22D4600950079AAA0 /* commFunctions.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = commFunctions.py; sourceTree = "<group>"; };
 		2CE560E42D464A200079AAA0 /* multipleLinearRegression.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = multipleLinearRegression.py; sourceTree = "<group>"; };
@@ -17,6 +18,7 @@
 		2C1A98F32D45D9C900A833FB = {
 			isa = PBXGroup;
 			children = (
+				2CBFF2AE2D97F54400976755 /* firstFile.py */,
 				2CFAC6D52D4E8B51009311AF /* classificationProblems.py */,
 				2CE1CD1B2D45DAF200277BF5 /* linearRegression.py */,
 				2CE560E42D464A200079AAA0 /* multipleLinearRegression.py */,

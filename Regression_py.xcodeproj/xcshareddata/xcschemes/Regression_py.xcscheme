@@ -66,6 +66,10 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "/Users/raghunatht/Documents/Programming/Python/Regression_py/classificationProblems.py"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/raghunatht/Documents/Programming/Python/Regression_py/firstFile.py"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
